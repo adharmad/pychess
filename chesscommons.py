@@ -73,29 +73,29 @@ class Piece:
             retStr = 'q'
         elif self.x & self.MAX_BIT_MASK & self.KING:
             retStr = 'k'
-	elif self.x == self.NO_PIECE:
-	    retStr = '.'
+	    elif self.x == self.NO_PIECE:
+	        retStr = '.'
 
-	if (self.x & self.BLACK_MASK): 
+	    if (self.x & self.BLACK_MASK): 
             return retStr 
         elif not (self.x & self.WHITE_MASK):
             return string.upper(retStr)
-	else:
-	    return retStr
+	    else:
+	        return retStr
 
-    # Pieces
-    BLACK_PAWN = Piece('black', 'pawn')
-    BLACK_BISHOP = Piece('black', 'bishop')
-    BLACK_KNIGHT = Piece('black', 'knight')
-    BLACK_ROOK = Piece('black', 'rook')
-    BLACK_QUEEN= Piece('black', 'queen')
-    BLACK_KING = Piece('black', 'king')
-    WHITE_PAWN = Piece('white', 'pawn')
-    WHITE_BISHOP = Piece('white', 'bishop')
-    WHITE_KNIGHT = Piece('white', 'knight')
-    WHITE_ROOK = Piece('white', 'rook')
-    WHITE_QUEEN= Piece('white', 'queen')
-    WHITE_KING = Piece('white', 'king')
+# Pieces
+BLACK_PAWN = Piece('black', 'pawn')
+BLACK_BISHOP = Piece('black', 'bishop')
+BLACK_KNIGHT = Piece('black', 'knight')
+BLACK_ROOK = Piece('black', 'rook')
+BLACK_QUEEN= Piece('black', 'queen')
+BLACK_KING = Piece('black', 'king')
+WHITE_PAWN = Piece('white', 'pawn')
+WHITE_BISHOP = Piece('white', 'bishop')
+WHITE_KNIGHT = Piece('white', 'knight')
+WHITE_ROOK = Piece('white', 'rook')
+WHITE_QUEEN= Piece('white', 'queen')
+WHITE_KING = Piece('white', 'king')
 
 # class Pos
 class Pos:
@@ -280,4 +280,3 @@ class Board:
     # pos -> Pos object
     def isEmptySquare(self, pos):
         pass
-
